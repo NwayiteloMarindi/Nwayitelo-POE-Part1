@@ -88,3 +88,25 @@ CREATE TABLE PARTICIPANT (
         FOREIGN KEY (user_id)
         REFERENCES [USER](user_id)
 );
+
+CREATE TABLE REGISTRATION (
+    registration_id INT IDENTITY(1,1) PRIMARY KEY,
+    race_id INT NOT NULL,
+    participant_id INT NOT NULL,
+    registration_date DATE NOT NULL DEFAULT GETDATE(),
+    status VARCHAR(20) NOT NULL DEFAULT 'REGISTERED',
+
+    CONSTRAINT FK_Registration_Race
+        FOREIGN KEY (race_id)
+        REFERENCES RACE(race_id),
+
+    CONSTRAINT FK_Registration_Participant
+        FOREIGN KEY (participant_id)
+        REFERENCES PARTICIPANT(participant_id),
+
+    CONSTRAINT UQ_Registration_Race_Participant
+        UNIQUE (race_id, participant_id),
+
+    CONSTRAINT CK_Registration_Status
+        CHECK (status IN ('REGISTERED', 'CANCELLED', 'COMPLETED'))
+);
