@@ -132,3 +132,28 @@ CREATE TABLE RESULT (
     CONSTRAINT CK_Result_Status
         CHECK (result_status IN ('RECORDED', 'DISQUALIFIED', 'DNF'))
 );
+
+
+CREATE TABLE TICKET (
+    ticket_id INT IDENTITY(1,1) PRIMARY KEY,
+    user_id INT NOT NULL,
+    event_id INT NOT NULL,
+    ticket_type VARCHAR(50) NOT NULL DEFAULT 'GENERAL',
+    purchase_date DATE NOT NULL DEFAULT GETDATE(),
+    price DECIMAL(10,2) NOT NULL,
+    ticket_status VARCHAR(20) NOT NULL DEFAULT 'VALID',
+
+    CONSTRAINT FK_Ticket_User
+        FOREIGN KEY (user_id)
+        REFERENCES [USER](user_id),
+
+    CONSTRAINT FK_Ticket_Event
+        FOREIGN KEY (event_id)
+        REFERENCES RACE_EVENT(event_id),
+
+    CONSTRAINT CK_Ticket_Price
+        CHECK (price >= 0),
+
+    CONSTRAINT CK_Ticket_Status
+        CHECK (ticket_status IN ('VALID', 'USED', 'CANCELLED'))
+);
