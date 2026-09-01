@@ -110,3 +110,25 @@ CREATE TABLE REGISTRATION (
     CONSTRAINT CK_Registration_Status
         CHECK (status IN ('REGISTERED', 'CANCELLED', 'COMPLETED'))
 );
+
+CREATE TABLE RESULT (
+    result_id INT IDENTITY(1,1) PRIMARY KEY,
+    registration_id INT NOT NULL UNIQUE,
+    finishing_position INT,
+    finish_time TIME,
+    points INT DEFAULT 0,
+    result_status VARCHAR(20) NOT NULL DEFAULT 'RECORDED',
+
+    CONSTRAINT FK_Result_Registration
+        FOREIGN KEY (registration_id)
+        REFERENCES REGISTRATION(registration_id),
+
+    CONSTRAINT CK_Result_Position
+        CHECK (finishing_position IS NULL OR finishing_position > 0),
+
+    CONSTRAINT CK_Result_Points
+        CHECK (points >= 0),
+
+    CONSTRAINT CK_Result_Status
+        CHECK (result_status IN ('RECORDED', 'DISQUALIFIED', 'DNF'))
+);
