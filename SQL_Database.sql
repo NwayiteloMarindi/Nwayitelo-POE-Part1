@@ -26,3 +26,26 @@ CREATE TABLE [USER] (
     CONSTRAINT CK_User_Role
         CHECK (role IN ('ORGANISER', 'PARTICIPANT'))
 );
+
+
+
+CREATE TABLE RACE_EVENT (
+    event_id INT IDENTITY(1,1) PRIMARY KEY,
+    venue_id INT NOT NULL,
+    organizer_id INT NOT NULL,
+    event_name VARCHAR(150) NOT NULL,
+    event_date DATE NOT NULL,
+    description VARCHAR(500),
+    status VARCHAR(20) NOT NULL DEFAULT 'UPCOMING',
+
+    CONSTRAINT FK_Event_Venue
+        FOREIGN KEY (venue_id)
+        REFERENCES VENUE(venue_id),
+
+    CONSTRAINT FK_Event_Organizer
+        FOREIGN KEY (organizer_id)
+        REFERENCES [USER](user_id),
+
+    CONSTRAINT CK_Event_Status
+        CHECK (status IN ('UPCOMING', 'ACTIVE', 'COMPLETED', 'CANCELLED'))
+);
