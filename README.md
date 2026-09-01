@@ -10,3 +10,6 @@ The components represented in the Race Day ERD include:
 6.	REGISTRATION – documents the entries of participants into races.
 7.	RESULT – records the outcomes or performances of participants in races.
 8.	TICKET – maintains information about tickets bought for racing events
+
+
+myERD.png
