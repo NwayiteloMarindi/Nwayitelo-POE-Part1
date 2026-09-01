@@ -73,3 +73,18 @@ CREATE TABLE RACE (
         UNIQUE (event_id, race_number)
 );
 
+CREATE TABLE PARTICIPANT (
+    participant_id INT IDENTITY(1,1) PRIMARY KEY,
+    user_id INT NOT NULL UNIQUE,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    phone VARCHAR(20),
+    date_of_birth DATE NOT NULL,
+    gender VARCHAR(20),
+    address VARCHAR(200),
+
+    CONSTRAINT FK_Participant_User
+        FOREIGN KEY (user_id)
+        REFERENCES [USER](user_id)
+);
