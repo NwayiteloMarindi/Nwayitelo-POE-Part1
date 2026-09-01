@@ -49,3 +49,27 @@ CREATE TABLE RACE_EVENT (
     CONSTRAINT CK_Event_Status
         CHECK (status IN ('UPCOMING', 'ACTIVE', 'COMPLETED', 'CANCELLED'))
 );
+
+CREATE TABLE RACE (
+    race_id INT IDENTITY(1,1) PRIMARY KEY,
+    event_id INT NOT NULL,
+    race_name VARCHAR(100) NOT NULL,
+    race_number INT NOT NULL,
+    distance DECIMAL(6,2) NOT NULL,
+    start_time TIME NOT NULL,
+    description VARCHAR(300),
+
+    CONSTRAINT FK_Race_Event
+        FOREIGN KEY (event_id)
+        REFERENCES RACE_EVENT(event_id),
+
+    CONSTRAINT CK_Race_Distance
+        CHECK (distance > 0),
+
+    CONSTRAINT CK_Race_Number
+        CHECK (race_number > 0),
+
+    CONSTRAINT UQ_Race_Event_Number
+        UNIQUE (event_id, race_number)
+);
+
