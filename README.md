@@ -12,4 +12,4 @@ The components represented in the Race Day ERD include:
 8.	TICKET – maintains information about tickets bought for racing events
 
 
-![Nwayitelo-POE-Part1](ERD_DIAGRAM.png)
+![Nwayitelo-POE-Part1](doc/ERD_DIAGRAM.png)
