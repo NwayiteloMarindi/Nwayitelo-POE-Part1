@@ -1,0 +1,478 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\controllers\\resultscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\controllers\\resultscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\controllers\\rolescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\dto\\updateresultsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\dto\\updateresultsdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\dto\\newroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\dto\\newroles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\dto\\updaterole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\dto\\updaterole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\dto\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\roles.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\migrations\\20261016084027_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\migrations\\20261016084027_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\results.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\useraccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\dto\\create_venuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\dto\\create_venuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\dto\\venuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\dto\\venuedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\dto\\updateuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\dto\\updateuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\dto\\createuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\dto\\createuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\race_day.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\race_day.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\registration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\ticket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\race.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\race.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\race_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\race_event.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|c:\\users\\student\\documents\\github\\nwayitelo-poe-part1\\doc\\race_day\\race_day\\models\\entities\\venue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{619D9E10-FE98-CA15-C274-5A8263C3DF83}|Race_Day\\Race_Day.csproj|solutionrelative:race_day\\models\\entities\\venue.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UpdateResultsDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UpdateResultsDTO.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\DTO\\UpdateResultsDTO.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UpdateResultsDTO.cs",
+              "RelativeToolTip": "Race_Day\\Models\\DTO\\UpdateResultsDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T09:06:03.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Roles.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Roles.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\Roles.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Roles.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\Roles.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAhwAkAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T08:32:08.938Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Program.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Program.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Program.cs",
+              "RelativeToolTip": "Race_Day\\Program.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T08:24:06.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Race_Day\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:23:44.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UserDTO.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\DTO\\UserDTO.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UserDTO.cs",
+              "RelativeToolTip": "Race_Day\\Models\\DTO\\UserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T05:51:19.776Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RolesController.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Controllers\\RolesController.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Controllers\\RolesController.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Controllers\\RolesController.cs",
+              "RelativeToolTip": "Race_Day\\Controllers\\RolesController.cs",
+              "ViewState": "AgIAADcAAAAAAAAAAAAAADMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:23:41.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ResultsController.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Controllers\\ResultsController.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Controllers\\ResultsController.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Controllers\\ResultsController.cs",
+              "RelativeToolTip": "Race_Day\\Controllers\\ResultsController.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:22:54.828Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "NewRoles.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\NewRoles.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\DTO\\NewRoles.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\NewRoles.cs",
+              "RelativeToolTip": "Race_Day\\Models\\DTO\\NewRoles.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T08:47:18.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateRole.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UpdateRole.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\DTO\\UpdateRole.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UpdateRole.cs",
+              "RelativeToolTip": "Race_Day\\Models\\DTO\\UpdateRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T08:49:45.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20261016084027_initialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Migrations\\20261016084027_initialCreate.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Migrations\\20261016084027_initialCreate.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Migrations\\20261016084027_initialCreate.cs",
+              "RelativeToolTip": "Race_Day\\Migrations\\20261016084027_initialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T08:40:28.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\appsettings.json",
+              "RelativeDocumentMoniker": "Race_Day\\appsettings.json",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\appsettings.json",
+              "RelativeToolTip": "Race_Day\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-10-16T08:40:45.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Login.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Login.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\Login.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Login.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\Login.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:15:45.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UserAccount.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\UserAccount.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\UserAccount.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\UserAccount.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\UserAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:13:59.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ApplicationDbcontext.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Data\\ApplicationDbcontext.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Data\\ApplicationDbcontext.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Data\\ApplicationDbcontext.cs",
+              "RelativeToolTip": "Race_Day\\Data\\ApplicationDbcontext.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAIA8wBMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T05:52:50.562Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Create_VenueDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\Create_VenueDTO.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\DTO\\Create_VenueDTO.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\Create_VenueDTO.cs",
+              "RelativeToolTip": "Race_Day\\Models\\DTO\\Create_VenueDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:06:07.894Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "VenueDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\VenueDTO.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\DTO\\VenueDTO.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\VenueDTO.cs",
+              "RelativeToolTip": "Race_Day\\Models\\DTO\\VenueDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:05:14.445Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Results.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Results.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\Results.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Results.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\Results.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T05:11:12.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UpdateUser.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UpdateUser.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\DTO\\UpdateUser.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UpdateUser.cs",
+              "RelativeToolTip": "Race_Day\\Models\\DTO\\UpdateUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:03:49.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateUser.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\CreateUser.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\DTO\\CreateUser.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\CreateUser.cs",
+              "RelativeToolTip": "Race_Day\\Models\\DTO\\CreateUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwBMAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T06:02:55.352Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Registration.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Registration.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\Registration.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Registration.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\Registration.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T05:10:49.558Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Ticket.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Ticket.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\Ticket.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Ticket.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\Ticket.cs",
+              "ViewState": "AgIAAA4AAADw//////88wBIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T05:10:18.859Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "Race.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Race.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\Race.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Race.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\Race.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAQwBEAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T05:09:40.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Race_Day.csproj",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Race_Day.csproj",
+              "RelativeDocumentMoniker": "Race_Day\\Race_Day.csproj",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Race_Day.csproj",
+              "RelativeToolTip": "Race_Day\\Race_Day.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-10-16T05:07:48.536Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "Race_Event.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Race_Event.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\Race_Event.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Race_Event.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\Race_Event.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T05:09:10.351Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Venue.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Venue.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\Venue.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\Venue.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\Venue.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T05:08:50.581Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Race_Day\\Models\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\Entities\\User.cs",
+              "RelativeToolTip": "Race_Day\\Models\\Entities\\User.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAQwA4AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-16T05:08:31.298Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
