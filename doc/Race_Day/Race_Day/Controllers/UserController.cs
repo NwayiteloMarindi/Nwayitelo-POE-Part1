@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using Race_Day.Data;
 using Race_Day.Models;
-using Race_Day.Models.DTOs;
+using Race_Day.Models.DTO;
+using Race_Day.Models.Entities;
 
 namespace Race_Day.Controllers
 {
@@ -31,20 +32,17 @@ namespace Race_Day.Controllers
             return Ok(User);
         }
         [HttpPost]
-        public IActionResult AddNewUser(Add_New_UserDTO addDTO)
+        public IActionResult AddNewUser(CreateUser addDTO)
         {
             var user = new User
             {
-                Username = addDTO.Username,
-                FirstName = addDTO.FirstName,
-                LastName = addDTO.LastName,
-                DateOfBirth = addDTO.DateOfBirth,
-                PhoneNumber = addDTO.PhoneNumber,
+                Name = addDTO.Name,
+                Email = addDTO.Email,
+                Password = addDTO.Password,
+                Role     = addDTO.Role,
+                Phone = addDTO.Phone,
 
-                // server-controlled:
-                CreatedAt = DateTime.UtcNow,
-                LastLogin = DateTime.UtcNow,
-                IsActive = true,
+                
             };
 
             dbcontext.users.Add(user);
@@ -53,15 +51,14 @@ namespace Race_Day.Controllers
         }
         [HttpPut]
         [Route("{id:guid}")]
-        public IActionResult EditUserPorfile(Guid id, Edit_Existing_UserDTO editDTO)
+        public IActionResult EditUserPorfile(Guid id, UpdateUser editDTO)
         {
             var user = dbcontext.users.Find(id);
-            if (User == null) return NotFound($"No user was found with {id}");
-            if (editDTO.Username != null) user.Username = editDTO.Username;
-            if (editDTO.FirstName != null) user.FirstName = editDTO.FirstName;
-            if (editDTO.LastName != null) user.LastName = editDTO.LastName;
-            if (editDTO.DateOfBirth != null) user.DateOfBirth = editDTO.DateOfBirth.Value;
-            if (editDTO.PhoneNumber != null) user.PhoneNumber = editDTO.PhoneNumber;
+            if (user == null) return NotFound($"No user was found with {id}");
+            if (editDTO.Name != null) user.Name = editDTO.Name      ;
+            if (editDTO.Email != null) user.Email = editDTO.Email;
+            if (editDTO.Phone != null) user.Phone = editDTO.Phone; 
+            if (editDTO.Role != null) user.Role = editDTO.Role;
 
 
             dbcontext.SaveChanges();
