@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Race_Day.Data;
 using Race_Day.Models;
+using Race_Day.Models.Entities;
 
 
 var builder = WebApplication.CreateBuilder(args);
