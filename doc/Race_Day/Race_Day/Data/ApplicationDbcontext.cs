@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Race_Day.Models;
+using Race_Day.Models.Entities;
 namespace Race_Day.Data
 {
     public class ApplicationDbcontext: DbContext
@@ -9,13 +10,13 @@ namespace Race_Day.Data
             
         }
         public DbSet<User> users { get; set; }
-        public DbSet<Role> roles { get; set; }
-        public DbSet<UserRole> userRoles { get; set; }
-        public DbSet<Category> categories { get; set; }
-        public DbSet<Enrolment> enrolments { get; set; }
-        public DbSet<Event> events { get; set; }
-        public DbSet<Participant_Event> participant_Events { get; set; }
-        public DbSet<Result> results { get; set; }
+        public DbSet<Race_Event> race_Events { get; set; }
+        public DbSet<Race> races { get; set; }
+        public DbSet<Venue> venues { get; set; }
+        public DbSet<Registration> registrations { get; set; }
+        public DbSet<Ticket> tickets { get; set; }
+        public DbSet<Participant> participant { get; set; }
+        public DbSet<Results> results { get; set; }
         public DbSet<UserAccount> accounts { get; set; }
     }
 }

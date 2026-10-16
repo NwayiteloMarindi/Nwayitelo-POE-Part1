@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Race_Day")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1f0f8c196188c5fe688a164c326ad57cdec81765")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2eaae174a307ad2ced378442263c4c4d10807bb5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Race_Day")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Race_Day")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
