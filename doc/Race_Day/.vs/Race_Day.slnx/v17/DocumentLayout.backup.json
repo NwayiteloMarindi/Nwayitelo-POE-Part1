@@ -114,11 +114,23 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
             {
               "$type": "Document",
@@ -126,8 +138,8 @@
               "Title": "UpdateResultsDTO.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UpdateResultsDTO.cs",
               "RelativeDocumentMoniker": "Race_Day\\Models\\DTO\\UpdateResultsDTO.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UpdateResultsDTO.cs*",
-              "RelativeToolTip": "Race_Day\\Models\\DTO\\UpdateResultsDTO.cs*",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Models\\DTO\\UpdateResultsDTO.cs",
+              "RelativeToolTip": "Race_Day\\Models\\DTO\\UpdateResultsDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-16T09:06:03.835Z",
@@ -204,8 +216,8 @@
               "Title": "ResultsController.cs",
               "DocumentMoniker": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Controllers\\ResultsController.cs",
               "RelativeDocumentMoniker": "Race_Day\\Controllers\\ResultsController.cs",
-              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Controllers\\ResultsController.cs*",
-              "RelativeToolTip": "Race_Day\\Controllers\\ResultsController.cs*",
+              "ToolTip": "C:\\Users\\Student\\Documents\\GitHub\\Nwayitelo-POE-Part1\\doc\\Race_Day\\Race_Day\\Controllers\\ResultsController.cs",
+              "RelativeToolTip": "Race_Day\\Controllers\\ResultsController.cs",
               "ViewState": "AgIAADIAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-16T06:22:54.828Z",
@@ -236,18 +248,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-16T08:49:45.86Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{56df62a4-05a3-4e5b-aa1a-99371ccfb997}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
             },
             {
               "$type": "Document",
