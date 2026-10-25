@@ -1,8 +1,18 @@
+using Microsoft.Extensions.Options;
+using Race_Day.Mvc.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.Configure<ApiSettings>(
+    builder.Configuration.GetSection("ApiSettings")
+);
+builder.Services.AddHttpClient("ApiClient", (sp, client) =>
+{
+    var settings = sp.GetRequiredService<IOptions<ApiSettings>>().Value;
+    client.BaseAddress = new Uri(settings.BaseUrl);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
