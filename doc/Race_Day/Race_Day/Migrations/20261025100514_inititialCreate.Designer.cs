@@ -12,8 +12,8 @@ using Race_Day.Data;
 namespace Race_Day.Migrations
 {
     [DbContext(typeof(ApplicationDbcontext))]
-    [Migration("20261016084027_initialCreate")]
-    partial class initialCreate
+    [Migration("20261025100514_inititialCreate")]
+    partial class inititialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,25 +25,25 @@ namespace Race_Day.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Race_Day.Models.Entities.Login", b =>
+            modelBuilder.Entity("Race_Day.Models.Entities.Category", b =>
                 {
-                    b.Property<int>("LoginId")
+                    b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("LoginId"));
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
 
-                    b.Property<string>("UserAccountEmail")
+                    b.Property<string>("CategoryDescription")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("UserAccountPassword")
+                    b.Property<string>("CategoryName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("LoginId");
+                    b.HasKey("CategoryId");
 
-                    b.ToTable("logins");
+                    b.ToTable("categories");
                 });
 
             modelBuilder.Entity("Race_Day.Models.Entities.Participant", b =>
@@ -99,6 +99,10 @@ namespace Race_Day.Migrations
                         .HasColumnType("int");
 
                     b.Property<string>("Race_Number")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Race_Winner")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -196,7 +200,7 @@ namespace Race_Day.Migrations
                     b.ToTable("registrations");
                 });
 
-            modelBuilder.Entity("Race_Day.Models.Entities.Results", b =>
+            modelBuilder.Entity("Race_Day.Models.Entities.Result", b =>
                 {
                     b.Property<int>("ResultsId")
                         .ValueGeneratedOnAdd()
@@ -247,78 +251,6 @@ namespace Race_Day.Migrations
                     b.ToTable("Roles");
                 });
 
-            modelBuilder.Entity("Race_Day.Models.Entities.Ticket", b =>
-                {
-                    b.Property<int>("TicketId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TicketId"));
-
-                    b.Property<DateOnly>("PurchaseDate")
-                        .HasColumnType("date");
-
-                    b.Property<int>("Race_EventId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("TicketDescription")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TicketName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("TicketPrice")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("TicketStatus")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TicketType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
-                    b.HasKey("TicketId");
-
-                    b.ToTable("tickets");
-                });
-
-            modelBuilder.Entity("Race_Day.Models.Entities.User", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Role")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("users");
-                });
-
             modelBuilder.Entity("Race_Day.Models.Entities.UserAccount", b =>
                 {
                     b.Property<int>("UserAccountId")
@@ -350,39 +282,6 @@ namespace Race_Day.Migrations
                     b.HasKey("UserAccountId");
 
                     b.ToTable("accounts");
-                });
-
-            modelBuilder.Entity("Race_Day.Models.Entities.Venue", b =>
-                {
-                    b.Property<int>("VenueId")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("VenueId"));
-
-                    b.Property<string>("VenuesCapcity")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("VenuesCity")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("VenuesLocation")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("VenuesName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("VenuesProvince")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("VenueId");
-
-                    b.ToTable("venues");
                 });
 #pragma warning restore 612, 618
         }

@@ -16,10 +16,10 @@ namespace Race_Day.Controllers
          this.dbcontext = dbcontext;
         }
         [HttpGet]
-        public IActionResult GetAllResults()
+        public IActionResult GetDetailedResults()
         {
             var results = dbcontext.results
-             .Select(r => $"Result {r.ResultsId}: {r.ResultsPosition} at {r.ResultsTime}")
+             .Select(r => $"Result {r.ResultsName}: {r.ResultsPosition} at {r.ResultsTime}")
             .ToList();
             return Ok(results);
         }
@@ -29,7 +29,7 @@ namespace Race_Day.Controllers
         {
             var result = dbcontext.results.Find(id);
             if (result == null) return NotFound($"No result was found with ID {id}");
-            return Ok($"Result {result.ResultsId}: {result.ResultsPosition} at {result.ResultsTime}");
+            return Ok($"Result {result.ResultsName}: {result.ResultsPosition} at {result.ResultsTime}");
         }
         [HttpPut("{id:int}")]
         [Authorize(Roles = "Admin")]
@@ -44,15 +44,6 @@ namespace Race_Day.Controllers
             dbcontext.SaveChanges();
             return Ok($"Result {result.ResultsId} was updated successfully");
         }
-        [HttpGet]
-        public IActionResult GetResultsByRegistrationId(int registrationId)
-        {
-            var results = dbcontext.results
-                .Where(r => r.RegistrationId == registrationId)
-                .Select(r => $"Result {r.ResultsId}: {r.ResultsPosition} at {r.ResultsTime}")
-                .ToList();
-            if (!results.Any()) return NotFound($"No results were found for Registration ID {registrationId}");
-            return Ok(results);
-        }
+        
     }
 }

@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Race_Day.Models.Entities
 {
-    public class Results
+    public class Result
     {
         [Key]
         public int ResultsId { get; set; }

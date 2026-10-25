@@ -19,7 +19,7 @@ namespace Race_Day.Controllers
         [HttpGet]
         public IActionResult GetAllUsers()
         {
-            var Users = dbcontext.users.ToList();
+            var Users = dbcontext.accounts.ToList();
             return Ok(Users);
         }
         [HttpGet]
@@ -27,25 +27,24 @@ namespace Race_Day.Controllers
 
         public IActionResult GetUserByID(Guid id)
         {
-            var User = dbcontext.users.Find(id);
+            var User = dbcontext.accounts.Find(id);
             if (User == null) return NotFound();
             return Ok(User);
         }
         [HttpPost]
         public IActionResult AddNewUser(CreateUser addDTO)
         {
-            var user = new User
+            var user = new UserAccount
             {
-                Name = addDTO.Name,
-                Email = addDTO.Email,
-                Password = addDTO.Password,
-                Role     = addDTO.Role,
-                Phone = addDTO.Phone,
-
+                UserAccountName = addDTO.Name,
+                UserAccountEmail = addDTO.Email,
+                UserAccountPassword = addDTO.Password,
+                UserAccountRole     = addDTO.Role,
+                UserAccountPhone = addDTO.Phone,
                 
             };
 
-            dbcontext.users.Add(user);
+            dbcontext.accounts.Add(user);
             dbcontext.SaveChanges();
             return Ok("User was added successfully");
         }
@@ -53,12 +52,12 @@ namespace Race_Day.Controllers
         [Route("{id:guid}")]
         public IActionResult EditUserPorfile(Guid id, UpdateUser editDTO)
         {
-            var user = dbcontext.users.Find(id);
+            var user = dbcontext.accounts.Find(id);
             if (user == null) return NotFound($"No user was found with {id}");
-            if (editDTO.Name != null) user.Name = editDTO.Name      ;
-            if (editDTO.Email != null) user.Email = editDTO.Email;
-            if (editDTO.Phone != null) user.Phone = editDTO.Phone; 
-            if (editDTO.Role != null) user.Role = editDTO.Role;
+            if (editDTO.Name != null) user.UserAccountName = editDTO.Name      ;
+            if (editDTO.Email != null) user.UserAccountEmail = editDTO.Email;
+            if (editDTO.Phone != null) user.UserAccountPhone = editDTO.Phone; 
+            if (editDTO.Role != null) user.UserAccountRole = editDTO.Role;
 
 
             dbcontext.SaveChanges();
@@ -69,10 +68,10 @@ namespace Race_Day.Controllers
         [Route("{id:guid}")]
         public IActionResult RemoveUser(Guid id)
         {
-        var User = dbcontext.users.Find(id);
+        var User = dbcontext.accounts.Find(id);
             if (User == null) return NotFound($"No user was found with {id}");
 
-            dbcontext.users.Remove(User);
+            dbcontext.accounts.Remove(User);
             dbcontext.SaveChanges();
             return Ok("User was Deleted successfully");
         }

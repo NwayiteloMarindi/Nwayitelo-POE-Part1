@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Race_Day.Migrations
 {
     /// <inheritdoc />
-    public partial class initialCreate : Migration
+    public partial class inititialCreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -29,17 +29,17 @@ namespace Race_Day.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "logins",
+                name: "categories",
                 columns: table => new
                 {
-                    LoginId = table.Column<int>(type: "int", nullable: false)
+                    CategoryId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    UserAccountEmail = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    UserAccountPassword = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    CategoryName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CategoryDescription = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_logins", x => x.LoginId);
+                    table.PrimaryKey("PK_categories", x => x.CategoryId);
                 });
 
             migrationBuilder.CreateTable(
@@ -85,6 +85,7 @@ namespace Race_Day.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Race_EventId = table.Column<int>(type: "int", nullable: false),
                     Race_name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Race_Winner = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Race_Number = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Race_distance = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Race_time = table.Column<TimeOnly>(type: "time", nullable: false),
@@ -145,60 +146,6 @@ namespace Race_Day.Migrations
                 {
                     table.PrimaryKey("PK_Roles", x => x.RoleId);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "tickets",
-                columns: table => new
-                {
-                    TicketId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Race_EventId = table.Column<int>(type: "int", nullable: false),
-                    UserId = table.Column<int>(type: "int", nullable: false),
-                    TicketType = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TicketPrice = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
-                    TicketName = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    TicketDescription = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PurchaseDate = table.Column<DateOnly>(type: "date", nullable: false),
-                    TicketStatus = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_tickets", x => x.TicketId);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "users",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Role = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Phone = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_users", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "venues",
-                columns: table => new
-                {
-                    VenueId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    VenuesName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    VenuesLocation = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    VenuesCity = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    VenuesCapcity = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    VenuesProvince = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_venues", x => x.VenueId);
-                });
         }
 
         /// <inheritdoc />
@@ -208,7 +155,7 @@ namespace Race_Day.Migrations
                 name: "accounts");
 
             migrationBuilder.DropTable(
-                name: "logins");
+                name: "categories");
 
             migrationBuilder.DropTable(
                 name: "participant");
@@ -227,15 +174,6 @@ namespace Race_Day.Migrations
 
             migrationBuilder.DropTable(
                 name: "Roles");
-
-            migrationBuilder.DropTable(
-                name: "tickets");
-
-            migrationBuilder.DropTable(
-                name: "users");
-
-            migrationBuilder.DropTable(
-                name: "venues");
         }
     }
 }
