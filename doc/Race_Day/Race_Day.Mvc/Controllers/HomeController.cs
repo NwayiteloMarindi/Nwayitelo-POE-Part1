@@ -29,16 +29,20 @@ namespace Race_Day.Mvc.Controllers
                 viewModel.CategoryCount = await CountAsync(client, "api/Category");
                 viewModel.EnrolmentCount = await CountAsync(client, "api/Enrolment");
                 viewModel.ResultCount = await CountAsync(client, "api/Results");
+              
 
+                viewModel.UpcomingEvents = await GetListAsync<EventDto>(client, "api/Event") ?? new();
+                viewModel.Categories = await GetListAsync<CategoryDto>(client, "api/Category") ?? new();
+                viewModel.RecentEnrolments = await GetListAsync<EnrolmentDto>(client, "api/Enrolment") ?? new();
+                viewModel.RecentResults = await GetListAsync<ResultDto>(client, "api/Result") ?? new();
+                viewModel.Payments = await GetListAsync<PaymentDto>(client, "api/Payment/status") ?? new();
 
-                viewModel.UpcomingEvents = await GetListAsync<EventDto>(client, "api/Events") ?? new();
-                viewModel.Categories = await GetListAsync<CategoryDto>(client, "api/Categories") ?? new();
-                viewModel.RecentEnrolments = await GetListAsync<EnrolmentDto>(client, "api/Enrolments") ?? new();
-                viewModel.RecentResults = await GetListAsync<ResultDto>(client, "api/Results") ?? new();
-
-                viewModel.TotalRevenue = viewModel.RecentEnrolments
-                    .Where(e => e.PaymentStatus == "Paid")
-                    .Sum(e => e.AmountPaid);
+                viewModel.TotalRevenue = viewModel.Payments
+                    .Where(p => string.Equals(
+                        p.PaymentStatus,
+                        "Paid",
+                        StringComparison.OrdinalIgnoreCase))
+                    .Sum(p => p.Amount);
             }
             catch (Exception ex)
             {

@@ -1,21 +1,24 @@
-﻿namespace Race_Day.Models.DTO
+﻿
+namespace Race_Day.Client.Models.DTOs
 {
-    public class DashBoardDTO
+    public class DashboardDto
     {
-       
-        // Counts
+        // Dashboard counts
         public int UserCount { get; set; }
         public int EventCount { get; set; }
         public int CategoryCount { get; set; }
         public int EnrolmentCount { get; set; }
         public int ResultCount { get; set; }
+
+        // Financial summary
         public decimal TotalRevenue { get; set; }
 
-        // Recent lists
+        // Dashboard lists
         public List<EventDto> UpcomingEvents { get; set; } = new();
         public List<CategoryDto> Categories { get; set; } = new();
-        public List<RegisterDTO> RecentEnrolments { get; set; } = new();
+        public List<EnrolmentDto> RecentEnrolments { get; set; } = new();
         public List<ResultDto> RecentResults { get; set; } = new();
+        public List<PaymentDto> Payments { get; set; } = new();
     }
 
     public class EventDto
@@ -29,17 +32,11 @@
 
     public class CategoryDto
     {
-        public Guid CategoryId { get; set; }
+        public int CategoryId { get; set; }
         public string CategoryName { get; set; } = "";
-        public int MinAge { get; set; }
-        public int MaxAge { get; set; }
-        public string GenderRestrictions { get; set; } = "";
-        public int MaxParticipants { get; set; }
-        public string CreatedBy { get; set; } = "";
-        public DateTime CreatedAt { get; set; }
     }
 
-    public class RegistrationDto
+    public class EnrolmentDto
     {
         public int EnrolmentId { get; set; }
         public string UserName { get; set; } = "";
@@ -51,6 +48,16 @@
         public DateTime EnrolmentDate { get; set; }
     }
 
+    public class PaymentDto
+    {
+        public int EnrolmentId { get; set; }
+        public decimal Amount { get; set; }
+        public string PaymentMethod { get; set; } = "";
+        public string PaymentStatus { get; set; } = "";
+        public string? Reference { get; set; }
+        public DateTime? PaidAt { get; set; }
+    }
+
     public class ResultDto
     {
         public int ResultId { get; set; }
@@ -59,4 +66,3 @@
         public string? FinishTimeSeconds { get; set; }
     }
 }
-

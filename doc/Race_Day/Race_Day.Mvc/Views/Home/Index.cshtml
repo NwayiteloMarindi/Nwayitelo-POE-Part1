@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Dashboard";
 }
-
+<link rel="stylesheet" href="~/css/dashboard.css" asp-append-version="true" />
 <h1 class="display-6 mb-4">Dashboard</h1>
 
 <!-- KPI row -->
@@ -27,8 +27,8 @@ else
         @foreach (var e in Model.UpcomingEvents)
         {
             <li class="list-group-item d-flex justify-content-between">
-                <span>@e.EventName — @e.Location</span>
-                <span>@e.EventDate.ToString("dd MMM yyyy")</span>
+                <span>@e.Race_EventName — @e.VenueId</span>
+                <span>@e.Race_EventDate.ToString("dd MMM yyyy")</span>
             </li>
         }
     </ul>
@@ -41,9 +41,7 @@ else
     {
         <div class="card">
             <h3 class="card-title">@c.CategoryName</h3>
-            <p><strong>Ages:</strong> @c.MinAge – @c.MaxAge</p>
-            <p><strong>Gender:</strong> @c.GenderRestrictions</p>
-            <p><strong>Max:</strong> @c.MaxParticipants</p>
+           <p>@c.CategoryDescription</p>
         </div>
     }
 </div>
@@ -62,12 +60,12 @@ else
             @foreach (var e in Model.RecentEnrolments)
             {
                 <tr>
-                    <td>@e.UserName</td>
-                    <td>@e.EventName</td>
-                    <td>@e.CategoryName</td>
-                    <td>@e.EnrolmentStatus</td>
-                    <td>@e.AmountPaid.ToString("C")</td>
-                    <td>@e.EnrolmentDate.ToLocalTime().ToString("dd MMM yyyy")</td>
+                    <td>@e.ParticipantName</td>
+                    <td>@e.ParticipantAddress</td>
+                    <td>@e.ParticipantCity</td>
+                    <td>@e.ParticipantProvince</td>
+                   
+                    <td>@e.Race_EventId</td>
                 </tr>
             }
         </tbody>
