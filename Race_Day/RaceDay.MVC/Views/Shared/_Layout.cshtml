@@ -5,93 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - RaceDay</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <style>
-        body {
-    background: #F0F8FF;
-}
-
-.navbar-brand {
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: #2563A6;
-}
-
-.hero {
-    background: linear-gradient(135deg, #87CEEB, #4169E1);
-    color: white;
-    padding: 4rem 2rem;
-    border-radius: .5rem;
-}
-
-.card-event {
-    transition: transform .2s;
-    background: #FFFFFF;
-    border: 1px solid #D6EAF8;
-}
-
-.card-event:hover {
-    transform: translateY(-4px);
-}
-
-.badge-confirmed {
-    background: #4682B4;
-    color: white;
-}
-
-.badge-pending {
-    background: #BDE0FE;
-    color: #174A70;
-}
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-white">
-    <div class="container">
-        <a class="navbar-brand" asp-controller="Home" asp-action="Index">RaceDay</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav me-auto">
-                <li class="nav-item"><a class="nav-link" asp-controller="Events" asp-action="Index">Events</a></li>
-                @if (Context.Session.GetString("UserRole") == "Participant")
-                {
-                    <li class="nav-item"><a class="nav-link" asp-controller="Events" asp-action="MyEnrolments">My Enrolments</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="Events" asp-action="MyResults">My Results</a></li>
-                }
-                @if (Context.Session.GetString("UserRole") == "Admin")
-                {
-                    <li class="nav-item"><a class="nav-link" asp-controller="Organiser" asp-action="Dashboard">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="Organiser" asp-action="CreateEvent">Create Event</a></li>
-                }
-            </ul>
-            <ul class="navbar-nav">
-                @if (Context.Session.GetString("JWToken") != null)
-                {
-                    <li class="nav-item"><span class="navbar-text me-2"> @Context.Session.GetString("UserName") (@Context.Session.GetString("UserRole"))</span></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Logout">Logout</a></li>
-                }
-                else
-                {
-                    <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Login">Login</a></li>
-                    <li class="nav-item"><a class="nav-link" asp-controller="Account" asp-action="Register">Register</a></li>
-                }
-            </ul>
+    <nav class="navbar navbar-expand-lg app-navbar">
+        <div class="container">
+            <a class="navbar-brand brand" asp-controller="Home" asp-action="Index">
+                <span class="brand-mark"><i class="bi bi-flag-fill"></i></span>
+                RaceDay
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Events" && ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")" asp-controller="Events" asp-action="Index">
+                            <i class="bi bi-calendar-event"></i> Events
+                        </a>
+                    </li>
+                    @if (Context.Session.GetString("UserRole") == "Participant")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Events" && ViewContext.RouteData.Values["Action"]?.ToString() == "MyEnrolments" ? "active" : "")" asp-controller="Events" asp-action="MyEnrolments">
+                                <i class="bi bi-card-list"></i> My Enrolments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Events" && ViewContext.RouteData.Values["Action"]?.ToString() == "MyResults" ? "active" : "")" asp-controller="Events" asp-action="MyResults">
+                                <i class="bi bi-bar-chart"></i> My Results
+                            </a>
+                        </li>
+                    }
+                    @if (Context.Session.GetString("UserRole") == "Admin")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Organiser" && ViewContext.RouteData.Values["Action"]?.ToString() == "Dashboard" ? "active" : "")" asp-controller="Organiser" asp-action="Dashboard">
+                                <i class="bi bi-speedometer2"></i> Dashboard
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link @(ViewContext.RouteData.Values["Controller"]?.ToString() == "Organiser" && ViewContext.RouteData.Values["Action"]?.ToString() == "CreateEvent" ? "active" : "")" asp-controller="Organiser" asp-action="CreateEvent">
+                                <i class="bi bi-plus-circle"></i> Create Event
+                            </a>
+                        </li>
+                    }
+                </ul>
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    @if (Context.Session.GetString("JWToken") != null)
+                    {
+                        <li class="nav-item">
+                            <span class="user-pill">
+                                <i class="bi bi-person-circle"></i>
+                                @Context.Session.GetString("UserName") (@Context.Session.GetString("UserRole"))
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Account" asp-action="Logout">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                        </li>
+                    }
+                    else
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Account" asp-action="Login">
+                                <i class="bi bi-box-arrow-in-right"></i> Login
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Account" asp-action="Register">
+                                <i class="bi bi-person-plus"></i> Register
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
-<main class="container my-4">
-    @if (TempData["Success"] != null)
-    {
-        <div class="alert alert-success alert-dismissible fade show">@TempData["Success"]<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
-    }
-    @if (TempData["Error"] != null)
-    {
-        <div class="alert alert-danger alert-dismissible fade show">@TempData["Error"]<button type="button" class="btn-close" data-bs-dismiss="alert"></button></div>
-    }
-    @RenderBody()
-</main>
-<footer class="text-center text-muted py-4">© @DateTime.Now.Year RaceDay — Sports Event Management</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </nav>
+
+    <main class="container page-shell">
+        @if (TempData["Success"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["Success"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        @if (TempData["Error"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["Error"]
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        }
+        @RenderBody()
+    </main>
+
+    <footer class="text-center py-4 text-muted small">
+        © @DateTime.Now.Year RaceDay. Sports event management platform.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

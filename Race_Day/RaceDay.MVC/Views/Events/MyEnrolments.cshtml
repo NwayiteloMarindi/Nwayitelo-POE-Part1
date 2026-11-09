@@ -1,20 +1,46 @@
 ﻿@model List<EnrolmentViewModel>
 @{ ViewData["Title"] = "My Enrolments"; }
-<h2>My Enrolments</h2>
-<table class="table table-striped">
-    <thead><tr><th>Event</th><th>Category</th><th>Date</th><th>Status</th></tr></thead>
-    <tbody>
-    @foreach (var e in Model)
-    {
-        <tr>
-            <td>@e.EventTitle</td>
-            <td>@e.CategoryName</td>
-            <td>@e.EnrolmentDate.ToString("dd MMM yyyy")</td>
-            <td>
-                <span class="badge @(e.Status == "Confirmed" ? "badge-confirmed" : "badge-pending")">@e.Status</span>
-            </td>
-        </tr>
-    }
-    @if (!Model.Any()) { <tr><td colspan="4" class="text-center text-muted">No enrolments yet.</td></tr> }
-    </tbody>
-</table>
+
+<section class="section-card">
+    <div class="section-head">
+        <div>
+            <h2>My Enrolments</h2>
+            <p class="subtitle mb-0">Track your active event registrations.</p>
+        </div>
+    </div>
+
+    <div class="table-wrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Category</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    @foreach (var e in Model)
+                    {
+                        <tr>
+                            <td>@e.EventTitle</td>
+                            <td>@e.CategoryName</td>
+                            <td>@e.EnrolmentDate.ToString("dd MMM yyyy")</td>
+                            <td>
+                                <span class="badge @(e.Status == "Confirmed" ? "badge-success" : "badge-warning")">@e.Status</span>
+                            </td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="4" class="text-center text-muted">No enrolments yet.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

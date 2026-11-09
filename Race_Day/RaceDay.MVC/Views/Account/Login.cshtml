@@ -1,24 +1,37 @@
 ﻿@model LoginViewModel
 @{ ViewData["Title"] = "Login"; }
-<div class="row justify-content-center">
-    <div class="col-md-5">
-        <div class="card shadow">
-            <div class="card-body">
-                <h3 class="card-title mb-3">Login</h3>
-                <form asp-action="Login" method="post">
-                    <div asp-validation-summary="All" class="text-danger"></div>
-                    <div class="mb-3">
-                        <label class="form-label">Email</label>
-                        <input asp-for="Email" type="email" class="form-control" required />
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label">Password</label>
-                        <input asp-for="Password" type="password" class="form-control" required />
-                    </div>
-                    <button type="submit" class="btn btn-primary w-100">Login</button>
-                </form>
-                <p class="mt-3 mb-0">No account? <a asp-action="Register">Register here</a></p>
+
+<div class="auth-wrap">
+    <div class="auth-card">
+        <div class="auth-header">
+            <div class="brand justify-content-center mb-3">
+                <span class="brand-mark"><i class="bi bi-flag-fill"></i></span>
+                RaceDay
             </div>
+            <h2>Login</h2>
+            <p>Access your account and manage your next event.</p>
         </div>
+
+        <form asp-action="Login" method="post">
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
+
+            <div class="mb-3">
+                <label class="form-label" for="Email">Email</label>
+                <input asp-for="Email" type="email" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label" for="Password">Password</label>
+                <input asp-for="Password" type="password" class="form-control" required />
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100">
+                <i class="bi bi-box-arrow-in-right"></i> Login
+            </button>
+        </form>
+
+        <p class="form-text-link mb-0">
+            No account yet? <a asp-action="Register">Create one</a>
+        </p>
     </div>
 </div>

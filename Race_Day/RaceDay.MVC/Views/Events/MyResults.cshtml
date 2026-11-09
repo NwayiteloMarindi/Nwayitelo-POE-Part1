@@ -1,17 +1,42 @@
 ﻿@model List<ResultViewModel>
 @{ ViewData["Title"] = "My Results"; }
-<h2>My Results</h2>
-<table class="table table-striped">
-    <thead><tr><th>Event</th><th>Finish Time</th><th>Position</th></tr></thead>
-    <tbody>
-    @foreach (var r in Model)
-    {
-        <tr>
-            <td>@r.EventTitle</td>
-            <td>@r.FinishTime.ToString(@"hh\:mm\:ss")</td>
-            <td><span class="badge bg-success">#@r.FinishingPosition</span></td>
-        </tr>
-    }
-    @if (!Model.Any()) { <tr><td colspan="3" class="text-center text-muted">No results yet.</td></tr> }
-    </tbody>
-</table>
+
+<section class="section-card">
+    <div class="section-head">
+        <div>
+            <h2>My Results</h2>
+            <p class="subtitle mb-0">Review your event positions and finish times.</p>
+        </div>
+    </div>
+
+    <div class="table-wrap">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Event</th>
+                    <th>Finish Time</th>
+                    <th>Position</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    @foreach (var r in Model)
+                    {
+                        <tr>
+                            <td>@r.EventTitle</td>
+                            <td>@r.FinishTime.ToString(@"hh\:mm\:ss")</td>
+                            <td><span class="badge badge-success">#@r.FinishingPosition</span></td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="3" class="text-center text-muted">No results yet.</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</section>

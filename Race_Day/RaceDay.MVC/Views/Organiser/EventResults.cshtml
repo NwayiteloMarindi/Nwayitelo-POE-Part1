@@ -1,48 +1,85 @@
 ﻿@model List<ResultViewModel>
 @{ ViewData["Title"] = "Event Results"; var eventId = (int)ViewBag.EventId; var enrolments = ViewBag.Enrolments as List<EnrolmentViewModel> ?? new(); }
-<h2>Event Results</h2>
-<a asp-action="Dashboard" class="btn btn-outline-secondary mb-3">← Back</a>
 
-<div class="row">
-    <div class="col-md-6">
-        <h4>Record a Result</h4>
-        <form asp-action="CaptureResult" method="post" class="card p-3 mb-3">
-            <input type="hidden" name="eventId" value="@eventId" />
-            <div class="mb-2">
-                <label class="form-label">Participant</label>
-                <select name="participantId" class="form-select" required>
-                    @foreach (var e in enrolments)
-                    {
-                        <option value="@e.ParticipantId">@e.ParticipantName (@e.CategoryName)</option>
-                    }
-                </select>
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Finish Time (hh:mm:ss)</label>
-                <input name="finishTime" class="form-control" placeholder="01:23:45" required />
-            </div>
-            <div class="mb-2">
-                <label class="form-label">Position</label>
-                <input name="position" type="number" min="1" class="form-control" required />
-            </div>
-            <button type="submit" class="btn btn-primary">Record</button>
-        </form>
+<section class="section-card">
+    <div class="section-head">
+        <div>
+            <h2>Event Results</h2>
+            <p class="subtitle mb-0">Record and review race outcomes for this event.</p>
+        </div>
+        <a asp-action="Dashboard" class="btn btn-outline-secondary">
+            <i class="bi bi-arrow-left"></i> Back
+        </a>
     </div>
-    <div class="col-md-6">
-        <h4>Recorded Results</h4>
-        <table class="table table-striped">
-            <thead><tr><th>Pos</th><th>Participant</th><th>Time</th></tr></thead>
-            <tbody>
-            @foreach (var r in Model)
-            {
-                <tr>
-                    <td>#@r.FinishingPosition</td>
-                    <td>@r.ParticipantName</td>
-                    <td>@r.FinishTime.ToString(@"hh\:mm\:ss")</td>
-                </tr>
-            }
-            @if (!Model.Any()) { <tr><td colspan="3" class="text-center text-muted">No results yet.</td></tr> }
-            </tbody>
-        </table>
+
+    <div class="row g-4">
+        <div class="col-lg-5">
+            <div class="card-surface h-100">
+                <h3 class="mb-3">Record a Result</h3>
+                <form asp-action="CaptureResult" method="post">
+                    <input type="hidden" name="eventId" value="@eventId" />
+
+                    <div class="mb-3">
+                        <label class="form-label">Participant</label>
+                        <select name="participantId" class="form-select" required>
+                            @foreach (var e in enrolments)
+                            {
+                                <option value="@e.ParticipantId">@e.ParticipantName (@e.CategoryName)</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Finish time</label>
+                        <input name="finishTime" class="form-control" placeholder="01:23:45" required />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Position</label>
+                        <input name="position" type="number" min="1" class="form-control" required />
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="bi bi-save"></i> Record Result
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-lg-7">
+            <div class="card-surface h-100">
+                <h3 class="mb-3">Recorded Results</h3>
+                <div class="table-wrap">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Participant</th>
+                                <th>Time</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (Model.Any())
+                            {
+                                @foreach (var r in Model)
+                                {
+                                    <tr>
+                                        <td><span class="badge badge-success">#@r.FinishingPosition</span></td>
+                                        <td>@r.ParticipantName</td>
+                                        <td>@r.FinishTime.ToString(@"hh\:mm\:ss")</td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="3" class="text-center text-muted">No results yet.</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>

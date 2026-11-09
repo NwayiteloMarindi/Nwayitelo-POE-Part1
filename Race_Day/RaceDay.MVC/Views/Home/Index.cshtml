@@ -1,8 +1,77 @@
 ﻿@{
     ViewData["Title"] = "Home";
 }
-<div class="hero text-center">
-    <h1 class="display-4">Welcome to RaceDay</h1>
-    <p class="lead">Discover, enrol, and compete in amazing sporting events.</p>
-    <a class="btn btn-light btn-lg mt-3" asp-controller="Events" asp-action="Index">Browse Events</a>
+
+<section class="page-header">
+    <div class="eyebrow"><i class="bi bi-trophy"></i> Race management</div>
+    <h1>Welcome to RaceDay</h1>
+    <p class="lead">Discover, enrol, and manage professional running, walking, and cycling events with confidence.</p>
+    <div class="header-actions">
+        <a class="btn btn-light" asp-controller="Events" asp-action="Index">
+            <i class="bi bi-search"></i> Browse Events
+        </a>
+        <a class="btn btn-outline-light" asp-controller="Account" asp-action="Register">
+            <i class="bi bi-person-plus"></i> Join Now
+        </a>
+    </div>
+</section>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="stat-card h-100">
+            <div class="stat-icon"><i class="bi bi-calendar3"></i></div>
+            <div class="stat-content">
+                <strong>120+</strong>
+                <span>Events hosted</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="stat-card h-100">
+            <div class="stat-icon"><i class="bi bi-people"></i></div>
+            <div class="stat-content">
+                <strong>8K</strong>
+                <span>Participants</span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="stat-card h-100">
+            <div class="stat-icon"><i class="bi bi-graph-up-arrow"></i></div>
+            <div class="stat-content">
+                <strong>98%</strong>
+                <span>Engagement</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row g-4 mt-1">
+    <div class="col-lg-4">
+        <div class="card-surface h-100">
+            <div class="mb-3">
+                <span class="badge badge-primary"><i class="bi bi-clipboard-check"></i> Simple</span>
+            </div>
+            <h3 class="mb-3">Event discovery</h3>
+            <p class="text-muted mb-0">Explore upcoming races, categories, and venues in one clean, organised experience.</p>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card-surface h-100">
+            <div class="mb-3">
+                <span class="badge badge-primary"><i class="bi bi-calendar2-week"></i> Efficient</span>
+            </div>
+            <h3 class="mb-3">Smart enrolments</h3>
+            <p class="text-muted mb-0">Manage participant applications, confirmations, and race participation through a streamlined workflow.</p>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card-surface h-100">
+            <div class="mb-3">
+                <span class="badge badge-primary"><i class="bi bi-trophy"></i> Reliable</span>
+            </div>
+            <h3 class="mb-3">Result tracking</h3>
+            <p class="text-muted mb-0">Capture finish times and publish results quickly with a clean, professional process.</p>
+        </div>
+    </div>
 </div>
