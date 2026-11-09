@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+
 namespace RaceDay.API.Models;
 
 public class Enrolment
@@ -7,18 +7,20 @@ public class Enrolment
     [Key]
     public int EnrolmentId { get; set; }
 
-    [ForeignKey(nameof(ParticipantId))]
+    [Required]
     public int ParticipantId { get; set; }
     public User Participant { get; set; } = null!;
 
-    [ForeignKey(nameof(EventId))]
+    [Required]
     public int EventId { get; set; }
     public Event Event { get; set; } = null!;
 
-    [ForeignKey(nameof(CategoryId))]
+    [Required]
     public int CategoryId { get; set; }
     public Category Category { get; set; } = null!;
 
     public DateTime EnrolmentDate { get; set; } = DateTime.UtcNow;
-    [Required, MaxLength(20)] public string Status { get; set; } = "Pending";
+
+    [Required, MaxLength(20)]
+    public string Status { get; set; } = "Pending";
 }

@@ -14,4 +14,5 @@ public class User
     public ICollection<Event> OrganisedEvents { get; set; } = new List<Event>();
     public ICollection<Enrolment> Enrolments { get; set; } = new List<Enrolment>();
     public ICollection<Result> Results { get; set; } = new List<Result>();
+    public ICollection<Payment> Payments { get; set; } = new List<Payment>();
 }

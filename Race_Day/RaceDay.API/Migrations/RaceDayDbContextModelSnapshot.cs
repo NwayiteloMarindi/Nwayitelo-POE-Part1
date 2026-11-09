@@ -128,6 +128,50 @@ namespace RaceDay.API.Migrations
                     b.ToTable("Events");
                 });
 
+            modelBuilder.Entity("RaceDay.API.Models.Payment", b =>
+                {
+                    b.Property<int>("PaymentId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("PaymentId"));
+
+                    b.Property<decimal>("Amount")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("EnrolmentId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("PaymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PaymentMethod")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TicketId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("PaymentId");
+
+                    b.HasIndex("EnrolmentId");
+
+                    b.HasIndex("TicketId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Payments");
+                });
+
             modelBuilder.Entity("RaceDay.API.Models.Result", b =>
                 {
                     b.Property<int>("ResultId")
@@ -155,6 +199,40 @@ namespace RaceDay.API.Migrations
                     b.HasIndex("ParticipantId");
 
                     b.ToTable("Results");
+                });
+
+            modelBuilder.Entity("RaceDay.API.Models.Ticket", b =>
+                {
+                    b.Property<int>("TicketId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("TicketId"));
+
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("Price")
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("TicketId");
+
+                    b.HasIndex("EventId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Tickets");
                 });
 
             modelBuilder.Entity("RaceDay.API.Models.User", b =>
@@ -241,6 +319,33 @@ namespace RaceDay.API.Migrations
                     b.Navigation("Organiser");
                 });
 
+            modelBuilder.Entity("RaceDay.API.Models.Payment", b =>
+                {
+                    b.HasOne("RaceDay.API.Models.Enrolment", "Enrolment")
+                        .WithMany()
+                        .HasForeignKey("EnrolmentId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("RaceDay.API.Models.Ticket", "Ticket")
+                        .WithMany("Payments")
+                        .HasForeignKey("TicketId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("RaceDay.API.Models.User", "User")
+                        .WithMany("Payments")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Enrolment");
+
+                    b.Navigation("Ticket");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("RaceDay.API.Models.Result", b =>
                 {
                     b.HasOne("RaceDay.API.Models.Event", "Event")
@@ -260,6 +365,25 @@ namespace RaceDay.API.Migrations
                     b.Navigation("Participant");
                 });
 
+            modelBuilder.Entity("RaceDay.API.Models.Ticket", b =>
+                {
+                    b.HasOne("RaceDay.API.Models.Event", "Event")
+                        .WithMany()
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("RaceDay.API.Models.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Event");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("RaceDay.API.Models.Category", b =>
                 {
                     b.Navigation("Enrolments");
@@ -274,11 +398,18 @@ namespace RaceDay.API.Migrations
                     b.Navigation("Results");
                 });
 
+            modelBuilder.Entity("RaceDay.API.Models.Ticket", b =>
+                {
+                    b.Navigation("Payments");
+                });
+
             modelBuilder.Entity("RaceDay.API.Models.User", b =>
                 {
                     b.Navigation("Enrolments");
 
                     b.Navigation("OrganisedEvents");
+
+                    b.Navigation("Payments");
 
                     b.Navigation("Results");
                 });
